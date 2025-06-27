@@ -12,14 +12,19 @@ require('dotenv').config();
   app.use(methodOverride("_method"))
 
   //MONGOOSE
-  const mongoose = require('mongoose');
-  main()
-  .then(()=>{console.log("connection successful")})
-  .catch(err => console.log(err));
-  async function main() {
-    await mongoose.connect("mongodb://127.0.0.1/Aas-Pass");
-  }
+ const mongoose = require('mongoose');
 
+main()
+  .then(() => {
+    console.log("✅ MongoDB Atlas connection successful");
+  })
+  .catch(err => {
+    console.log("❌ MongoDB connection error:", err);
+  });
+
+async function main() {
+  await mongoose.connect(process.env.MONGO_URI);
+}
   // REQUIRE MODELS
   const Paper=require("./models/paper.js");
   const localPaper=require("./models/localPaper.js")
