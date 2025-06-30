@@ -905,6 +905,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     color: #ffffff;
     margin: 0;
     padding: 0;
+    
 }
 
 
@@ -928,52 +929,98 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   color: #e6b800 !important;
 }
 
-.showLocal-main{
+
+/* LOCAL LIST OF CITIES STYLING  */
+.showLocal-main {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 70rem; /* 3 x (20rem + ~2rem margin) = around 66–70rem */
+  margin: auto;
+  gap: 1rem;
 }
-
-
 
 .city-div {
   display: flex;
-  flex-wrap: wrap;
   background-color: #333;
   height: 7rem;
   width: 20rem;
-  margin: 1rem 1rem 1rem 1rem;
+  margin: 1rem;
   opacity: 0.7;
-  border-radius: 2rem 2rem 2rem 2rem;
+  border-radius: 2rem;
   justify-content: center;
   align-items: center;
 }
 
-.city-div:hover{
+.city-div:hover {
   opacity: 1;
-  box-shadow: 1rem 1rem 1rem  #68655b ;
+  box-shadow: 1rem 1rem 1rem #68655b;
   transition: opacity 1s ease;
-
-  
-  
 }
 
-.city-div a{
+.city-div a {
   text-decoration: none !important;
   text-align: center;
   color: white;
-  
-
 }
 
-.city-head{
+.city-head {
   text-align: center;
   font-weight: 800;
   color: #e6b800;
 }
 
-.text-of-local:hover{
+.text-of-local:hover {
   text-decoration: solid underline 3px !important;
 }
+
+/* SEERCH BAR  */
+/* Wrapper for icon + input */
+.search-wrapper {
+  background-color: transparent;
+  border: 2px solid #e6b800;
+  border-radius: 50px;
+  padding: 0.6rem 1.2rem;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  max-width: 500px;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Search icon */
+.search-icon {
+  font-size: 1.2rem;
+  color: #e6b800;
+  margin-right: 0.8rem;
+}
+
+/* Search input */
+.custom-search {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+/* Placeholder */
+.custom-search::placeholder {
+  color: white;
+  opacity: 0.6;
+}
+
+/* Focus styles */
+.custom-search:focus {
+  color: white;
+}
+
+.search-wrapper:focus-within {
+  box-shadow: 0 0 10px #e6b800;
+}
+
 
 
 

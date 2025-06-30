@@ -16,10 +16,10 @@ require('dotenv').config();
 
 main()
   .then(() => {
-    console.log("✅ MongoDB Atlas connection successful");
+    console.log("MongoDB Atlas connection successful");
   })
   .catch(err => {
-    console.log("❌ MongoDB connection error:", err);
+    console.log("MongoDB connection error:", err);
   });
 
 async function main() {
@@ -245,7 +245,7 @@ app.get('/sports', async (req, res) => {
 
     const sportsNews = response.articles;
 
-    // ✅ Pass data to EJS here
+   
     res.render("sports.ejs", { sportsNews });
   } catch (error) {
     console.error('Error fetching news:', error.message);
