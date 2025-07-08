@@ -820,6 +820,10 @@ form textarea {
     resize: vertical;
 }
 
+.feature-list a{
+  text-decoration: none !important; 
+}
+
 form button[type="submit"] {
     display: block;
     margin: 30px auto 0 auto; /* top auto bottom */
